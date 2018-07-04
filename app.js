@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
 
+
 app.get('/', function(req, res) {
+
+  console.log('my var is: ', process.env.myVar)
+
   res.send({
-    "Output": "Hello World!"
+    "Output": process.env.myVar
   });
 });
 
